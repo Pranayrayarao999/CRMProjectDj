@@ -1,0 +1,101 @@
+Microsoft Windows [Version 10.0.22621.3447]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\DIGITAL LYNC PY\Python\Django\Django Project>python -m django -version
+No Django settings specified.
+Unknown command: '-version'
+Type 'python -m django help' for usage.
+
+D:\DIGITAL LYNC PY\Python\Django\Django Project>python -m venv env
+
+D:\DIGITAL LYNC PY\Python\Django\Django Project>cd env
+
+D:\DIGITAL LYNC PY\Python\Django\Django Project\env>cd Scripts
+
+D:\DIGITAL LYNC PY\Python\Django\Django Project\env\Scripts>activate
+
+(env) D:\DIGITAL LYNC PY\Python\Django\Django Project\env\Scripts>pip install django
+Collecting django
+  Using cached Django-5.0.4-py3-none-any.whl.metadata (4.1 kB)
+Collecting asgiref<4,>=3.7.0 (from django)
+  Using cached asgiref-3.8.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting sqlparse>=0.3.1 (from django)
+  Using cached sqlparse-0.5.0-py3-none-any.whl.metadata (3.9 kB)
+Collecting tzdata (from django)
+  Using cached tzdata-2024.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Using cached Django-5.0.4-py3-none-any.whl (8.2 MB)
+Using cached asgiref-3.8.1-py3-none-any.whl (23 kB)
+Using cached sqlparse-0.5.0-py3-none-any.whl (43 kB)
+Using cached tzdata-2024.1-py2.py3-none-any.whl (345 kB)
+Installing collected packages: tzdata, sqlparse, asgiref, django
+Successfully installed asgiref-3.8.1 django-5.0.4 sqlparse-0.5.0 tzdata-2024.1
+
+(env) D:\DIGITAL LYNC PY\Python\Django\Django Project\env\Scripts>django-admin startproject project1
+
+(env) D:\DIGITAL LYNC PY\Python\Django\Django Project\env\Scripts>cd project1
+
+(env) D:\DIGITAL LYNC PY\Python\Django\Django Project\env\Scripts\project1>dir
+ Volume in drive D is Drive
+ Volume Serial Number is F843-9499
+
+ Directory of D:\DIGITAL LYNC PY\Python\Django\Django Project\env\Scripts\project1
+
+19-04-2024  12:12    <DIR>          .
+19-04-2024  12:12    <DIR>          ..
+19-04-2024  12:12               686 manage.py
+19-04-2024  12:12    <DIR>          project1
+               1 File(s)            686 bytes
+               3 Dir(s)  192,643,473,408 bytes free
+
+(env) D:\DIGITAL LYNC PY\Python\Django\Django Project\env\Scripts\project1>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+April 19, 2024 - 12:13:28
+Django version 5.0.4, using settings 'project1.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+[19/Apr/2024 12:13:43] "GET / HTTP/1.1" 200 10629
+Not Found: /favicon.ico
+[19/Apr/2024 12:13:44] "GET /favicon.ico HTTP/1.1" 404 2112
+
+pip install django-filter
+
+Migrations :
+pip install MySQL
+python manage.py makemigrations  (creates 0001 file)
+python manage.py sqlmigrate applicationName 0001
+python manage.py migrate
+
+Creating SuperUser :
+python manage.py createsuperuser
+
+ORM (objctrelationalMapping):
+ insert some records in MySQL and open cmd
+python manage.py shell
+from appone.models import UserProfile(check and type)
+UserProfile.objects.all() or o = UserProfile.objects.all() 
+print(type(o))
+o = UserProfile.objects.get(id=1)     -- retrieves id=1
+print(o)
+o = UserProfile.objects.get(id=1)
+print(o.userName,o.email,o.contact)  --retrieves id=1 but display only username,email,contact
+exit() - for exit from shell
+print(o.as_p())
+print(o.as_table())
+o = UserProfileForm({'firstname':'sai','last_name':'kiran','email':'saikiran@gmail.com','phone':888938485'})
+o.is_valid()  - checks data is valid or not
+o.cleaned_data - you can see data after this
+type(o.cleaned_data['first_name'])
+
+
+
+
+
+
+
