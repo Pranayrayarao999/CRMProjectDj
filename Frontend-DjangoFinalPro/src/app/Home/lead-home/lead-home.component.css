@@ -1,0 +1,88 @@
+.drops{
+    color: white;
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+}
+
+/* Dropdown */
+nav{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+.menu{
+    display: inline-block;
+}
+.menu .dropdown{
+    margin-left: 10px;
+}
+.dropdown{
+    display: inline-block;
+    background-color: transparent;
+    color: black;
+}
+.dropdown button{
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+.dropdown a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.dropdown .content{
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+    z-index: 10;
+}
+.dropdown:hover .content{
+    display: block;
+}
+.dropdown:hover button{
+    background-color: rgb(118, 199, 231);
+    text-decoration:underline;
+    text-decoration-color: darkblue;
+}
+.dropdown a:hover{
+    background-color: lightblue;
+}
+.dropdown:active button {
+    background-color: rgb(118, 199, 231);
+    text-decoration:underline;
+    text-decoration-color: darkblue;
+}
+.active{
+    background-color: rgb(118, 199, 231);
+}
+
+/* BODY - Leadscount */
+.container1{
+    height: 250px;
+    width: 100%;
+    position: fixed;
+    top: 10px;
+    background-color: #F5EAE8;
+    color: black;
+}
+
+.box12{
+    background-color: transparent;
+    border: 2px solid transparent;
+    margin-top: 20px;
+    height: 140px;
+    display: flex;
+}
+.b12{
+    margin-left: 100px;
+    padding: 10px 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

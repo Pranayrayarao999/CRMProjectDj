@@ -1,0 +1,238 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Leads</title>
+    <link rel="stylesheet" href="update-leads.component.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1" routerLink="/FirstPage" style="cursor: pointer;"><strong><img src="assets\digtallynclogo.png" style="width: 40px; height: 40px; object-fit: contain;">Digital</strong>Lync</span>
+    
+          <div class="menu">
+            <div class="dropdown">
+              <button>Home ▼</button>
+              <div class="content">
+                  <a routerLink="/About">About&nbsp;Us</a>
+                  <a href="/SViews">Students&nbsp;Views</a>
+              </div>
+            </div>
+      
+            <div class="dropdown">
+              <button>Leads ▼</button>
+              <div class="content">
+                <a href="/LeadHome">Lead&nbsp;Home</a>
+                <a href="/TodayLeads" class="active">Today's&nbsp;Leads</a>
+                <a routerLink="/CreateLeads">Create&nbsp;Leads</a>
+              </div>
+            </div>
+    
+            <div class="dropdown">
+              <button>Opportunities ▼</button>
+              <div class="content">
+                  <a href="/JobFair">JobFair</a>
+              </div>
+            </div>
+    
+            <!-- <div class="dropdown">
+              <button>Learner ▼</button>
+              <div class="content">
+                  <a href="">Apple</a>
+                  <a href="">Orange</a>
+                  <a href="">Banana</a>
+              </div>
+            </div> -->
+    
+            <div class="dropdown">
+              <button>Courses ▼</button>
+              <div class="content">
+                  <a href="AllCourse">All&nbsp;Courses</a>
+                  <a href="Counselling">Counselling</a>
+              </div>
+            </div>
+    
+            <!-- <div class="dropdown">
+              <button>Activities ▼</button>
+              <div class="content">
+                  <a href="">Apple</a>
+                  <a href="">Orange</a>
+                  <a href="">Banana</a>
+              </div>
+            </div> -->
+    
+            <!-- <div class="dropdown">
+              <button>Analytics ▼</button>
+              <div class="content">
+                  <a href="">Apple</a>
+                  <a href="">Orange</a>
+                  <a href="">Banana</a>
+              </div>
+            </div> -->
+    
+            <div class="dropdown" style="margin-right: 40px;">
+              <a><img src="/assets/userimge.jpg" style="width: 30px; height: 30px; object-fit: contain;"></a>
+              <div class="content">
+                <a href="" (click)="logout()">LogOut</a>
+            </div>
+            </div>
+    
+          </div>
+        </div>
+    </nav>
+
+    <div class="fr2">
+        <h1 style="color: black; font-family:Arial, Helvetica, sans-serif; text-align: center; margin-top: 10px;">LEAD UPDATE</h1>
+
+    </div>
+                                             <!--*ngIf="UpdateData" -->
+    <div class="a">
+        <form [formGroup]="UpdateLeadForm" (ngSubmit)="onUpdate()">
+            <div class="a1">
+                <!-- <input [readonly]="true" formControlName="id" class="form-control mb-3" [(ngModel)]="UpdteLead.id"  type="hidden"> -->
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name1" formControlName="name" placeholder="Enter Name" required [(ngModel)]="UpdteLead.name1">
+                </div>
+                <div class="mb-3">
+                    <label for="cc" class="form-label">cc</label>
+                    <input type="number" class="form-control" id="cc" formControlName="cc1" placeholder="Enter CC" required [(ngModel)]="UpdteLead.cc1">
+                </div>
+                <div class="mb-3">
+                    <label for="contact_no" class="form-label">Phone</label>
+                    <input type="number" class="form-control" id="contact_no" formControlName="contact_no" placeholder="Enter Contact Number" required [(ngModel)]="UpdteLead.contact_no">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter Email" required [(ngModel)]="UpdteLead.email">
+                </div>
+                <div class="mb-3">
+                    <label for="fee_coated" class="form-label">Fee-Coated</label>
+                    <input type="text" class="form-control" id="fee_coated" formControlName="fee_coated" placeholder="Enter Fees" required [(ngModel)]="UpdteLead.fee_coated">
+                </div>
+                <div class="mb-3">
+                  <label for="description" class="form-label" style="margin-left: -230px; margin-top: 10px;">Description</label>
+                  <textarea class="form-control" id="description" rows="1" formControlName="description" required [(ngModel)]="UpdteLead.description" style="margin-left: -230px;"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label" style="margin-left: -230px; margin-top: 7px;">Date</label>
+                    <input type="date" class="form-control" id="date" formControlName="date" placeholder="Enter Date" required [(ngModel)]="UpdteLead.date" style="margin-left: -230px;">
+                </div>
+
+                <div class="mb-3">
+                    <label for="lead_source" class="form-label" style="margin-left: -230px; margin-top: 7px;">Lead Source</label>
+                    <input list="leadsource" class="form-control" id="lead_source" formControlName="lead_source" placeholder="Select Lead Source" required [(ngModel)]="UpdteLead.lead_source" style="margin-left: -230px;">
+                    <datalist id="leadsource">
+                        <option value="None">
+                        <option value="Walkin">
+                        <option value="StudentReferral">
+                        <option value="Demo">
+                        <option value="WebSite">
+                        <option value="WebsiteChat">
+                        <option value="InboundCall"></option>
+                        <option value="GoogleAdWords">
+                        <option value="FacebookAds">
+                        <option value="GoogleMyBusiness"></option>
+                        <option value="WhatsAppDigitalLync">
+                    </datalist>
+                </div>
+                <div class="mb-3">
+                    <label for="batch_timing" class="form-label" style="margin-left: -230px; margin-top: 7px;">Batch Timings</label>
+                    <input list="batchtimings" class="form-control" id="batch_timing" formControlName="batch_timing" placeholder="Select Batch Timings" required [(ngModel)]="UpdteLead.batch_timing" style="margin-left: -230px;">
+                    <datalist id="batchtimings">
+                        <option value="7AM_8AM">
+                        <option value="8AM_9AM">
+                        <option value="9AM_10AM">
+                        <option value="10AM_11AM">
+                        <option value="11AM_12PM">
+                        <option value="12PM_1PM">
+                        <option value="1PM_2PM">
+                        <option value="2PM_3PM">
+                        <option value="3PM_4PM">
+                        <option value="4PM_5PM">
+                        <option value="5PM_6PM">
+                        <option value="6PM_7PM">
+                        <option value="7PM_8PM">
+                        <option value="8PM_9PM">
+                    </datalist>
+                </div>
+                <div class="mb-3">
+                    <label for="class_mode" class="form-label" style="margin-left: -230px; margin-top: 7px;">Class Mode</label>
+                    <input list="ClassMode" class="form-control" id="class_mode" formControlName="class_mode" placeholder="Select Class Mode" required [(ngModel)]="UpdteLead.class_mode" style="margin-left: -230px;">
+                    <datalist id="ClassMode">
+                        <option value="HYDClassRoom">
+                        <option value="BLRClassRoom">
+                        <option value="IndiaOnline">
+                        <option value="InternationalOnline">
+                    </datalist>
+                </div>
+                <div class="mb-3">
+                    <label for="lead_status" class="form-label" style="margin-left: -470px; margin-top: 10px;">Lead Status</label>
+                    <input list="Status" class="form-control" id="lead_status" formControlName="lead_status" placeholder="Select Status" required [(ngModel)]="UpdteLead.lead_status" style="margin-left: -470px;">
+                    <datalist id="Status">
+                        <option value="None">
+                        <option value="NotContacted">
+                        <option value="Attempted">
+                        <option value="WarmLead">
+                        <option value="Opportunity">
+                        <option value="AttendedDemo">
+                        <option value="Visited">
+                        <option value="Registered">
+                        <option value="ColdLead">
+                    </datalist>
+                </div>
+                <div class="mb-3">
+                    <label for="courses" class="form-label" style="margin-left: -470px; margin-top: 10px;">Courses</label>
+                    <input list="Courses" class="form-control" id="courses" formControlName="courses" placeholder="Select Courses" required [(ngModel)]="UpdteLead.courses" style="margin-left: -470px;">
+                    <datalist id="Courses">
+                        <option value="Angular">
+                        <option value="AWS">
+                        <option value="Azure">
+                        <option value="AWSWithDevOps">
+                        <option value="BusinessAnalyst">
+                        <option value="DevOps">
+                        <option value="FrontEndAngular">
+                        <option value="FrontEndReact">
+                        <option value="Python">
+                        <option value="Java">
+                        <option value="FullStackMEAN">
+                        <option value="FullStackJAVA">
+                        <option value="FullstackPython">
+                        <option value="FullStackMERN">
+                        <option value="PowerBI">
+                        <option value="CloudOpsMasters">
+                        <option value="ServiceNow">
+                        <option value="NeedCounselling">
+                        <option value="SalesForceAdmin">
+                        <option value="Others">
+                        <option value="React">
+                        <option value="Tableau">
+                        <option value="Testing">
+                    </datalist>
+                </div>
+                <div class="mb-3">
+                    <label for="tech_stack" class="form-label" style="margin-left: -470px; margin-top: 10px;">TechStack</label>
+                    <input list="Stack" class="form-control" id="tech_stack" formControlName="tech_stack" placeholder="Select Tech Stack" required [(ngModel)]="UpdteLead.tech_stack" style="margin-left: -470px;">
+                    <datalist id="Stack">
+                        <option value="CloudOps">
+                        <option value="Salesforce">
+                        <option value="FullStack">
+                        <option value="DataStack">
+                        <option value="ServiceNow">
+                        <option value="BusinessStack">
+                        <option value="CareerCounselling">
+                    </datalist>
+                </div>
+            </div>
+            <div class="Create">
+                <button type="button" class="btn btn-outline-primary btn-lg" (click)="Cancel()" style="font-size: 20px; width: 230px; height: 45px; margin-left: 290px; margin-top: 8px; width: 30%;">Cancel</button>
+                <button type="submit" class="btn btn-primary btn-lg" style="font-size: 20px; width: 230px; height: 45px; margin-left: 70px; margin-top: 8px; width: 30%;" [disabled]="!UpdateLeadForm.valid">Create</button>       
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+    
