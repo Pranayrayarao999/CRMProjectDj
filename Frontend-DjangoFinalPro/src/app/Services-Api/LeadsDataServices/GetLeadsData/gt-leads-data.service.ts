@@ -27,5 +27,12 @@ export class GtLeadsDataService {
   UpdateLeadData(id:any, uData:any){       
     return this.Http.put<any>(`${this.UpdateLeadsDataUrl}${id}/`,uData);       //put - is used to update some values, patch- is used to update all values
   }
+
+  // SEARCHBAR
+  
+  SearchLeadsDataUrl:String="http://127.0.0.1:3000/api/leads/?search=";
+  SearchData(data:any){
+    return this.Http.get<any>(`${this.SearchLeadsDataUrl}${data}`);
+  }
 }
 

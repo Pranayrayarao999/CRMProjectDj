@@ -15,6 +15,8 @@ import { ULoginComponent } from './ulogin/ulogin.component';
 import { StudentViewsComponent } from './Home/student-views/student-views.component';
 import { authGuard } from './auth.guard';
 import { JobFairComponent } from './Home/job-fair/job-fair.component';
+import { TodayDataComponent } from './Home/today-data/today-data.component';
+import { YesterdayDataComponent } from './Home/yesterday-data/yesterday-data.component';
 
 const routes: Routes = [
   {path:'',redirectTo: 'UserLogin', pathMatch: 'full'},       //default route
@@ -34,7 +36,10 @@ const routes: Routes = [
   // USER LOGIN
   {path:'UserLogin',component:ULoginComponent},        // admin admin -- uname,pass
   {path:'SViews',component:StudentViewsComponent, canActivate: [authGuard]},
-  {path:'JobFair',component: JobFairComponent, canActivate: [authGuard]}
+  {path:'JobFair',component: JobFairComponent, canActivate: [authGuard]},
+  {path:'TData',component: TodayDataComponent, canActivate: [authGuard]},
+  {path:'YData',component:YesterdayDataComponent, canActivate: [authGuard]}
+  
 
 
 ];

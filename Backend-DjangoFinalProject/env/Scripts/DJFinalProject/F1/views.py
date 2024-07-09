@@ -1,12 +1,22 @@
 from django.shortcuts import render
-from rest_framework import viewsets
+from rest_framework import viewsets, mixins
 from rest_framework import response
 from rest_framework.response import Response
 from rest_framework.status import HTTP_204_NO_CONTENT
 from rest_framework.decorators import action
 
+from rest_framework import filters, generics
+from rest_framework.generics import ListAPIView
+from django_filters.rest_framework import DjangoFilterBackend
+
+
 from .models import CreateNewLead
 from .serializers import CreateNewLeadSerializer
+from django.utils import timezone
+from datetime import datetime
+from datetime import timedelta
+from datetime import date
+
 
 from rest_framework.authentication import BasicAuthentication     #this will not allow if you are not loggedin - BASIC/NORMAL AUTH
 from rest_framework.permissions import IsAuthenticated            #this checks the authentication whether user or not
@@ -17,13 +27,16 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 # @login_required                  #ONLY LOGIN PEOPLE CAN DO EVERYTHING
 class CreateNewLeadViewSet(viewsets.ModelViewSet):
+    #FILTERING (SEARCH) -- SEARCH BY NAME,EMAIL,CONTACTNO,DATE (You can see filter option in admin because of this)
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['name', 'email','contact_no','date']
 
     #CRUD OPERATIONS - CREATE,READ,UPDATE AND DELETE (LEAD DATA) 
     queryset = CreateNewLead.objects.all()
     serializer_class = CreateNewLeadSerializer
 
     # AUTHENTICATION PURPOSE
-    #authentication_classes = [BasicAuthentication]    #Passed in list because for future authentication, You can pass it normally BasicAuthentication  
+    #authentication_classes = [BasicAuthentication]            #Passed in list because for future authentication, You can pass it normally BasicAuthentication  
     # SessionAuth is for SIMILAR TO BASIC AUTHENTICATION
     #authentication_classes = [SessionAuthentication]
     #permission_classes = [IsAuthenticated]
@@ -35,6 +48,18 @@ class CreateNewLeadViewSet(viewsets.ModelViewSet):
         instance.delete()
 
         return response.Response({'messsage':"Record delete successfully"},status=HTTP_204_NO_CONTENT)
+    
+    # TO DISPLAY ONLY TODAYS LEADS DATA
+    # def TodayData_Lead(self):
+    #     today = datetime.date.today().year
+    #     todays_records = CreateNewLead.objects.filter(date=today)
+    #     return Response('TODAYS TOTAL DATA :', todays_records,status=HTTP_204_NO_CONTENT)
+    
+    # # # TO DISPLAY ONLY YESTERDAY LEAD DATA
+    # def YesterdayData_Lead(self,request):
+    #     yesterday = timezone.now().date() - timedelta(1)
+    #     yesterdays_records = CreateNewLead.objects.filter(date=yesterday)
+    #     return Response('YESTERDAY TOTAL DATA :', yesterdays_records,status=HTTP_204_NO_CONTENT)
     
     # pip install django-filter  -- TYPES THIS COMMAND IN CMD
     # TO RETRIEVE LEAD_STATUS:OPPORTUNITY/REGISTERED/WARMLEADS
@@ -74,6 +99,43 @@ class CreateNewLeadViewSet(viewsets.ModelViewSet):
     def alllead_count(self,request):
         count = CreateNewLead.objects.all().count()
         return Response({'TOTAL LEADS COUNT': count})
+    
+    # SEARCHING (FILTERING) - search by name,contactno,email,date (added filter on top)
+    # http://127.0.0.1:3000/api/leads/?search=Hari
+    def search(self):
+        name = self.request.query_params.get('name')
+        if name is not None:
+            queryset = self.queryset.filter(name=name)
+        else:
+            queryset = self.queryset
+        return queryset
+    
+    #http://127.0.0.1:3000/api/leads/?search=2024-07-09
+    # def get_todayleads(self):
+    #     today =datetime.date.today()
+    #     if date is not None:
+    #         queryset = self.queryset.filter(date=today)
+    #     else:
+    #         queryset = self.queryset
+    #     return queryset
+
+
+
+    
+
+    
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+
 
 
     

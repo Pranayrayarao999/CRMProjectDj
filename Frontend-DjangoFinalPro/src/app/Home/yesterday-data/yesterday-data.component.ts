@@ -1,29 +1,28 @@
-
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { DatePipe } from '@angular/common';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { DeleteLeadsService } from 'src/app/Services-Api/LeadsDataServices/DeleteLeadsData/delete-leads.service';
 import { GtLeadsDataService } from 'src/app/Services-Api/LeadsDataServices/GetLeadsData/gt-leads-data.service';
 
 @Component({
-  selector: 'app-today-leads',
-  templateUrl: './today-leads.component.html',
-  styleUrls: ['./today-leads.component.css']
+  selector: 'app-yesterday-data',
+  templateUrl: './yesterday-data.component.html',
+  styleUrls: ['./yesterday-data.component.css']
 })
-export class TodayLeadsComponent implements OnInit{
-
-  constructor(private gtleadsDataServce:GtLeadsDataService, private DeleteLeadService:DeleteLeadsService, private router:Router){}
+export class YesterdayDataComponent {
+  constructor(private gtleadsDataServce:GtLeadsDataService, private DeleteLeadService:DeleteLeadsService, private router:Router,private datePipe: DatePipe){}
 
   id:number;
-
   LeadsData:any;
-  ngOnInit():void{
-    this.gtleadsDataServce.getLeadsData().subscribe(response =>{
-      this.LeadsData=response;
-      console.log(this.LeadsData);
-      console.log("Data Retrieved SuccessFully");
 
-      console.log(this.token)
-    })
+  yesterday:string;
+  currentDate:Date;
+  ngOnInit():void{
+    // this.currentDate = this.datePipe.transform(new Date(), 'yyyy-MM-dd');
+    this.currentDate = new Date();
+    this.currentDate.setDate(this.currentDate.getDate()-1);
+    this.yesterday = this.datePipe.transform(this.currentDate, 'yyyy-MM-dd');
+    this.gtleadsDataServce.SearchData(this.yesterday).subscribe(result =>{ this.LeadsData = result})
   }
 
   Update(id:number){
@@ -58,11 +57,4 @@ export class TodayLeadsComponent implements OnInit{
     let text = this.searchBox.nativeElement.value;
     this.gtleadsDataServce.SearchData(text).subscribe(result =>{ this.LeadsData = result})
   }
-
-  // Date:string;
-  // TodaysLData(){
-  //   const Date = this.datePipe.transform(new Date(), 'yyyy-MM-dd');
-  //   this.gtleadsDataServce.SearchData(Date).subscribe(result =>{ this.LeadsData = result})
-  // }
-
 }

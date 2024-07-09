@@ -13,6 +13,7 @@ nav{
     position: fixed;
     width: 100%;
     z-index: 10;
+    top: 0;
 }
 .menu{
     display: inline-block;
@@ -65,27 +66,6 @@ nav{
     background-color: rgb(118, 199, 231);
 }
 
-/* GetFormsDataView */
-.data1{
-    padding: 5px;
-    border: 2px solid transparent;
-    /* font-size:10.9px; */
-    margin-top: 90px;
-}
-th td{
-    margin-left: 2px;
-    color: black;
-    text-align: center;
-    /* padding: 10px 10px; */
-}
-tr{
-    height: 40px;
-    text-align: center;
-}
-/* td{
-    padding: 90px;
-} */
-
 .L23{
     border: 2px solid transparent;
     background-color: white;
@@ -98,7 +78,7 @@ tr{
     
     /* z-index: 10; */
     /* display: inline-block; */
-}
+} 
 .search12{
     position: fixed;
     top: 70px;
@@ -108,3 +88,25 @@ tr{
     border-radius: 10px;
 }
 
+/* GetFormsDataView */
+.data1{
+    padding: 5px;
+    border: 2px solid transparent;
+    margin-top: 115px;
+}
+th td{
+    margin-left: 2px;
+    color: black;
+    text-align: center;
+    width: 100%;
+    
+    /* padding: 10px 10px; */
+}
+tr{
+    height: 40px;
+    text-align: center;
+}   
+
+/* td{
+    padding: 90px;
+}  */

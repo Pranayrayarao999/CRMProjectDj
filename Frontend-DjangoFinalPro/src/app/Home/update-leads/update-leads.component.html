@@ -26,7 +26,7 @@
               <button>Leads ▼</button>
               <div class="content">
                 <a href="/LeadHome">Lead&nbsp;Home</a>
-                <a href="/TodayLeads" class="active">Today's&nbsp;Leads</a>
+                <a href="/TodayLeads" class="active">All&nbsp;Leads</a>
                 <a routerLink="/CreateLeads">Create&nbsp;Leads</a>
               </div>
             </div>
@@ -95,11 +95,11 @@
                 <!-- <input [readonly]="true" formControlName="id" class="form-control mb-3" [(ngModel)]="UpdteLead.id"  type="hidden"> -->
                 <div class="mb-3">
                     <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name1" formControlName="name" placeholder="Enter Name" required [(ngModel)]="UpdteLead.name1">
+                    <input type="text" class="form-control" id="name1" formControlName="name" placeholder="Enter Name" required [(ngModel)]="UpdteLead.name">
                 </div>
                 <div class="mb-3">
                     <label for="cc" class="form-label">cc</label>
-                    <input type="number" class="form-control" id="cc" formControlName="cc1" placeholder="Enter CC" required [(ngModel)]="UpdteLead.cc1">
+                    <input type="number" class="form-control" id="cc" formControlName="cc" placeholder="Enter CC" required [(ngModel)]="UpdteLead.cc">
                 </div>
                 <div class="mb-3">
                     <label for="contact_no" class="form-label">Phone</label>

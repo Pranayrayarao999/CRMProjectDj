@@ -27,7 +27,7 @@
           <button>Leads ▼</button>
           <div class="content">
               <a href="/LeadHome">Lead&nbsp;Home</a>
-              <a href="/TodayLeads" class="active">Today's&nbsp;Leads</a>
+              <a href="/TodayLeads" class="active">All&nbsp;Leads</a>
               <a routerLink="/CreateLeads">Create&nbsp;Leads</a>
           </div>
         </div>
@@ -134,9 +134,23 @@
   </div>
 
   <div class="L23">
-    <h3 style="font-style: italic; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Today's Leads</h3>
+    <!-- <h3 style="font-style: italic; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin-top: 7px;">All Leads</h3> -->
+    <div class="dropdown">
+      <button style="font-style: italic; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">All&nbsp;Leads ▼</button>
+      <div class="content">
+          <a href="TData" style="font-style: italic; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Todays Leads</a>
+          <a href="YData" style="font-style: italic; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Yesterdays Leads</a>
+      </div>
+    </div>
+    <!-- <input  type="text" placeholder="Search" aria-label="Default" aria-describedby="inputGroup-sizing-default" style="margin-left: 80px;"> -->
     <button type="button" class="btn btn-info" routerLink="/CreateLeads" style="margin-left: 1100px;">Create Leads</button>
   </div>
 
+  <!-- SEARCH BUTTON -->
+  <div class="search12">
+    <input type="text" placeholder="search" #searchBox  >
+    <button type="button" class="btn btn-outline-primary" (click)="Search()">Search</button>
+  </div>
+  
 
 </body>
