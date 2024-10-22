@@ -22,7 +22,11 @@ from rest_framework.authtoken.views import obtain_auth_token
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/',include('F1.urls')),
-    path('User/',include('A1.urls')),
+    # AUTHENTICATION (SIGNUP AND LOGIN)
+    path('Auth/',include('Auth1.urls')),
+
+    # path('User/',include('A1.urls')),
+
     #path('Auth/', include('rest_framework.urls')),   #for Auth(login purpose), it makes changes in admin portal , left side login,logout (NOT WORKING)
     path('token/',obtain_auth_token),   #LOGIN, TOKEN BECAUSE OF THIS
     

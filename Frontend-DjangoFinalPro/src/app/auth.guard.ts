@@ -4,10 +4,12 @@ import { inject } from '@angular/core';
 export const authGuard: CanActivateFn = (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
   const router = inject(Router);
   const token= localStorage.getItem('tgt');
-  console.log("TOKEN:",token);
+  //console.log("TOKEN:",token);
+  // console.log("TOKEN:",token);
   console.log(route)     // tells/shows which component you are in
   console.log(state)     // tells/shows which route(link) is  used
   if(token){
+    //console.log(token);
     return true;
   }
   else{

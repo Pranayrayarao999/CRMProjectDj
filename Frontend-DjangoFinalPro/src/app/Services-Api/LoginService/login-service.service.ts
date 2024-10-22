@@ -11,8 +11,9 @@ export class LoginServiceService {
 
   constructor(private Http:HttpClient) { }
 
-
-  LoginUrl:string="http://127.0.0.1:3000/token/";
+  //THIS IS ALSO WORKING
+  //LoginUrl:string="http://127.0.0.1:3000/token/";
+  LoginUrl:string="http://127.0.0.1:3000/Auth/Login/";
 
   logincheck(data : LoginData){
     return this.Http.post<any>(this.LoginUrl,data);

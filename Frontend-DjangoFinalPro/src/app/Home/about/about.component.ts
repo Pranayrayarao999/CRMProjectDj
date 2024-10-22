@@ -7,11 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
-
+  
   constructor(private router:Router){}
 
   token:string=window.localStorage.getItem('tgt');
-
+  
   logout(){
     // this.logoutservice.logout();
     console.log(this.token);

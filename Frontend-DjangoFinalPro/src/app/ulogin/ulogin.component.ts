@@ -15,7 +15,8 @@ export class ULoginComponent{
 
   constructor(private loginservce:LoginServiceService,private router:Router,private fb:FormBuilder){
     this.LoginForm = this.fb.group({
-      "username": new FormControl('',[Validators.required]),
+      // "username": new FormControl('',[Validators.required]),
+      "email": new FormControl('',[Validators.required]),
       "password": new FormControl('',[Validators.required])
     });
   }
@@ -29,10 +30,15 @@ export class ULoginComponent{
     this.logindata = this.LoginForm.value;
     this.loginservce.logincheck(this.logindata).subscribe(
       success =>{
-        console.log(success);
+        //console.log(success);
+        const tokens = {
+          refresh : success.refresh,
+          access : success.access
+        }
         // alert(success.token);
-        window.localStorage.setItem('tgt', success.token);
-        window.localStorage.setItem('tgt_username', this.logindata.username);
+        // json-stringify : converts json objects to strings
+        window.localStorage.setItem('tgt', JSON.stringify(tokens));     
+        // window.localStorage.setItem('tgt_name', this.logindata.name);
         // window.localStorage.setItem('tgt', success);
         // window.localStorage.setItem('tgt_userName', success.username);
         // console.log("username :" +window.localStorage.getItem(success.username))

@@ -20,8 +20,13 @@
     <form [formGroup]="LoginForm" (ngSubmit)="LoginCheck()">
         <h3 style="color: black;">Login Here</h3>
 
-        <label for="username" style="color: #A6A09E;; font-weight: bold;">Username</label>
-        <input type="text" placeholder="Username" id="username" formControlName="username" style="color: black; border: 2px solid #A6A09E; ">
+        <!-- <label for="name" style="color: #A6A09E; font-weight: bold;" aria-hidden="true">name</label> -->
+
+        <!-- WORKING USERNAME FOR TOKEN -->
+        <!-- <label for="username" style="color: #A6A09E;; font-weight: bold;">Username</label> --> 
+        <!-- WORKING FOR SIMPLEJWT - EMAIL -->
+        <label for="email" style="color: #A6A09E;; font-weight: bold;">EMAIL</label>
+        <input type="text" placeholder="Username" id="email" formControlName="email" style="color: black; border: 2px solid #A6A09E; ">
             <!-- <div *ngIf="(LoginForm.get('username')?.touched || LoginForm.get('username')?.dirty) && LoginForm.get('username')?.invalid" class="alert alert-danger">
                 Valid Username required..!
             </div> -->
