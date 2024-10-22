@@ -3,4 +3,3 @@
 
 
 It is simple web application which is used by trainers to manage the data. Admin will create the credentials for all the trainers. Trainers can login and logout of the web application after performing the tasks. By using Search, They can find particular data. They can retrive data of Todays and yesterday separately.
-Admin is username and Admin is the password to login   (to check the project)
