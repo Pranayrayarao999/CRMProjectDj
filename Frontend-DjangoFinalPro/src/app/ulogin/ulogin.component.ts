@@ -56,4 +56,8 @@ export class ULoginComponent{
     )
   }
 
+  Registerpge(){
+    this.router.navigateByUrl('UserRegister');
+  }
+
 }

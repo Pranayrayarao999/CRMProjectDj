@@ -23,6 +23,7 @@ import { StudentViewsComponent } from './Home/student-views/student-views.compon
 import { JobFairComponent } from './Home/job-fair/job-fair.component';
 import { TodayDataComponent } from './Home/today-data/today-data.component';
 import { YesterdayDataComponent } from './Home/yesterday-data/yesterday-data.component';
+import { UsignupComponent } from './usignup/usignup.component';
 
 
 
@@ -45,6 +46,7 @@ import { YesterdayDataComponent } from './Home/yesterday-data/yesterday-data.com
     JobFairComponent,
     TodayDataComponent,
     YesterdayDataComponent,
+    UsignupComponent,
     
   ],
   imports: [

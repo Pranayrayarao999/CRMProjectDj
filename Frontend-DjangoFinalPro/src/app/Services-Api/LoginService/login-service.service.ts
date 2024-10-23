@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { LoginData } from 'src/app/Models/login-data';
+import { LoginData, SignUpData } from 'src/app/Models/login-data';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +23,15 @@ export class LoginServiceService {
   // isAuthenticated(): boolean {
   //   return this.loggedIn;
   // }
+
+  // SignUp
+  SignUpUrl:string = "http://127.0.0.1:3000/Auth/Registration/";
+
+  Signupcheck(data : SignUpData){
+    return this.Http.post<any>(this.SignUpUrl,data);
+    
+  }
+
 
   
 

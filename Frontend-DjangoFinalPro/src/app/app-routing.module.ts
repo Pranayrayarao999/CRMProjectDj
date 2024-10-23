@@ -17,6 +17,7 @@ import { authGuard } from './auth.guard';
 import { JobFairComponent } from './Home/job-fair/job-fair.component';
 import { TodayDataComponent } from './Home/today-data/today-data.component';
 import { YesterdayDataComponent } from './Home/yesterday-data/yesterday-data.component';
+import { UsignupComponent } from './usignup/usignup.component';
 
 const routes: Routes = [
   {path:'',redirectTo: 'UserLogin', pathMatch: 'full'},       //default route
@@ -34,13 +35,14 @@ const routes: Routes = [
   {path:'WarmDataL',component:WarmLeadsDataComponent, canActivate: [authGuard]},
   {path:'AttemptedDataL',component:AttemptedLeadsDataComponent, canActivate: [authGuard]},
   // USER LOGIN
-  {path:'UserLogin',component:ULoginComponent},        // admin admin -- uname,pass
+  {path:'UserLogin',component:ULoginComponent},        // Admin@gmail.com, admin -- uname,pass
   {path:'SViews',component:StudentViewsComponent, canActivate: [authGuard]},
   {path:'JobFair',component: JobFairComponent, canActivate: [authGuard]},
   {path:'TData',component: TodayDataComponent, canActivate: [authGuard]},
-  {path:'YData',component:YesterdayDataComponent, canActivate: [authGuard]}
+  {path:'YData',component:YesterdayDataComponent, canActivate: [authGuard]},
   
-
+  // USER SIGNUP
+  {path:'UserRegister', component: UsignupComponent}
 
 ];
 
