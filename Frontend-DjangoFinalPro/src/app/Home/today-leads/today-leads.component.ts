@@ -65,4 +65,9 @@ export class TodayLeadsComponent implements OnInit{
   //   this.gtleadsDataServce.SearchData(Date).subscribe(result =>{ this.LeadsData = result})
   // }
 
+  // TOTAL DATA DOWNLOAD INTO .CSV 
+  data(url){
+    window.open(url,'_blank'); // Opens the URL in a new tab 
+  }
+
 }

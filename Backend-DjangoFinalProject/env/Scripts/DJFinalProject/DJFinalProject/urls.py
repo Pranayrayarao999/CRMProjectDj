@@ -17,6 +17,7 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path,include
+# LOGIN BY USING CREATESUPERUSER USERNAME AND PASSWORD
 from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
@@ -29,6 +30,7 @@ urlpatterns = [
 
     #path('Auth/', include('rest_framework.urls')),   #for Auth(login purpose), it makes changes in admin portal , left side login,logout (NOT WORKING)
     path('token/',obtain_auth_token),   #LOGIN, TOKEN BECAUSE OF THIS
+    
     
 
 ]

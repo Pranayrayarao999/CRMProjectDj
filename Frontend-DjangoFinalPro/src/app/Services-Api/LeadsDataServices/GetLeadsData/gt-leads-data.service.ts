@@ -29,10 +29,10 @@ export class GtLeadsDataService {
   }
 
   // SEARCHBAR
-  
   SearchLeadsDataUrl:String="http://127.0.0.1:3000/api/leads/?search=";
   SearchData(data:any){
     return this.Http.get<any>(`${this.SearchLeadsDataUrl}${data}`);
   }
+
 }
 

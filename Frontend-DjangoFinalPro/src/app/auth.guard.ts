@@ -9,6 +9,11 @@ export const authGuard: CanActivateFn = (route: ActivatedRouteSnapshot, state: R
   console.log(route)     // tells/shows which component you are in
   console.log(state)     // tells/shows which route(link) is  used
   if(token){
+    // if token is empty or null it will redirect to userlogin
+    // if(token == ' ' || null){
+    //   router.navigate(['UserLogin']);
+    //   return false;
+    // }
     //console.log(token);
     return true;
   }

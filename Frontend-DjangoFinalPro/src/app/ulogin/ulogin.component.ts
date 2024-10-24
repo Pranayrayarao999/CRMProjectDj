@@ -30,6 +30,12 @@ export class ULoginComponent{
     this.logindata = this.LoginForm.value;
     this.loginservce.logincheck(this.logindata).subscribe(
       success =>{
+        // Check if tokens are available
+        if (!success || !success.refresh || !success.access) {
+          alert("Login failed. Please try again.");
+          return; // Stop further execution
+        }
+        
         //console.log(success);
         const tokens = {
           refresh : success.refresh,
