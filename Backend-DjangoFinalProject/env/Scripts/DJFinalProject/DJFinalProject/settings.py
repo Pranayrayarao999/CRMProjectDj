@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-%g!l7il!2p^=ntrg@y#cjd#yv6ezrbeqpfu_bzyenp$t^2b%q*
 DEBUG = True
 
 # FOR HOSTING THIS APPLICATION 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -163,8 +163,6 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    # vercel
-    "https://crmproject-dj.vercel.app/",
 ]
 
 AUTH_USER_MODEL = "Auth1.User"
