@@ -94,6 +94,7 @@ o.is_valid()  - checks data is valid or not
 o.cleaned_data - you can see data after this
 type(o.cleaned_data['first_name'])
 
+pip freeze > requirements.txt   -- Creates requirement.txt file
 
 
 
