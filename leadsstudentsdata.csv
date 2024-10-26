@@ -1,0 +1,37 @@
+ID,Name,Email,Date,cc,contact_no,fee_coated,date,lead_source,batch_timing,lead_status,courses,tech_stack
+1,RajKishoreVarma,rajskr@gmail.com,2024-06-03,91,1234567890,23000.00,2024-06-03,StudentReferral,10AM_11AM,AttendedDemo,FullstackPython,FullStack
+2,KishoreKumar,kish@gmail.com,2024-06-05,91,987654321,13560.87,2024-06-05,Demo,10AM_11AM,Attempted,FullstackPython,FullStack
+4,PranayKumar,pranay@gmail.com,2024-06-06,91,1122334456,13560.87,2024-06-06,None,8AM_9AM,Opportunity,FullstackPython,DataStack
+5,Saikiran,sai@gmail.com,2024-06-09,91,1265998800,12300.23,2024-06-09,StudentReferral,11AM_12PM,Registered,DevOps,CloudOps
+6,Tirumal,tiru1345@gmail.com,2024-06-11,91,9876512980,12000.34,2024-06-11,Demo,8AM_9AM,Registered,AWS,CloudOps
+7,KishanKanth,kishan123@gmail.com,2024-06-11,91,9177621990,12000.00,2024-06-11,Demo,9AM_10AM,AttendedDemo,Azure,CloudOps
+8,SatyaRaj,satya@yahoo.in,2024-06-10,2,2348975261,12000.00,2024-06-10,StudentReferral,6PM_7PM,Attempted,AWSWithDevOps,CloudOps
+9,Rashmi,rashmi429@gmail.com,2024-06-10,91,1234561234,4500.98,2024-06-10,None,8AM_9AM,Visited,FrontEndReact,FullStack
+10,Tara,tara4562@gmail.com,2024-06-02,91,1987453213,8000.00,2024-06-02,GoogleAdWords,12PM_1PM,AttendedDemo,Python,FullStack
+11,Meghana,meghanareddy12@gmail.com,2024-06-03,91,9851990231,23000.00,2024-06-03,FacebookAds,7PM_8PM,WarmLead,FullstackPython,FullStack
+12,Rajinikanth,robo123@gmail.com,2023-06-01,91,4564567821,12000.00,2023-06-01,WebsiteChat,5PM_6PM,AttendedDemo,PowerBI,DataStack
+13,vidya raj,vidya23@gmail.com,2023-04-23,91,9166236781,12300.56,2023-04-23,WhatsAppDigitalLync,8PM_9PM,Visited,ServiceNow,ServiceNow
+14,DivyaRedy,divredy@yahoo.in,2024-02-04,91,9763213654,15478.27,2024-02-04,WebsiteChat,8PM_9PM,Registered,CloudOpsMasters,CloudOps
+21,SAMARAT,SAMRAT@gmail.com,2024-06-23,91,7894527234,12300.56,2024-06-23,WebSite,2PM_3PM,Registered,SalesForceAdmin,Salesforce
+22,DarshanTogus,dboss12@gmail.com,2024-06-20,91,3465666947,23450.00,2024-06-20,GoogleAdWords,11AM_12PM,Attempted,PowerBI,DataStack
+23,VaniSri,vanisriv@gmail.com,2024-06-28,91,2842793729,28900.00,2024-06-28,WebSite,5PM_6PM,WarmLead,Java,FullStack
+24,RavaliReddy,ravliredy@yahoo.in,2024-07-02,1,6475283890,12000.00,2024-07-02,StudentReferral,7AM_8AM,Opportunity,Python,FullStack
+25,VaniHariRayrao,vh12@gmail.com,2024-07-01,91,4847557838,23000.00,2024-07-01,Demo,1PM_2PM,Attempted,DevOps,CloudOps
+26,Nandaredy,nandered23@gmail.com,2024-07-02,91,4767274622,12300.23,2024-07-02,WalkIn,12PM_1PM,Opportunity,FullstackPython,FullStack
+27,RajeshredyV,vundterajesh@gmail.com,2024-07-02,91,3664272891,9000.23,2024-07-02,InboundCall,5PM_6PM,WarmLead,Azure,CloudOps
+28,PraneethKumar,praneeth@gmail.com,2024-06-06,91,1122334455,13560.87,2024-06-06,None,8AM_9AM,Opportunity,FullstackPython,FullStack
+29,rayrao,rayrao@gmail.com,2024-07-03,91,7462883662,12300.23,2024-07-03,Demo,1PM_2PM,WarmLead,Java,FullStack
+32,shanti,shnti34@yahoo.in,2024-07-03,91,7644820284,8900.00,2024-07-03,Demo,7AM_8AM,WarmLead,Angular,FullStack
+33,swaroop,swaroop46@gmail.com,2024-07-03,91,947648223,7650.23,2024-07-03,StudentReferral,7AM_8AM,Attempted,Java,FullStack
+34,JaganRedy,reddyjagan@yahoo.in,2024-07-03,91,9365838830,23089.43,2024-07-03,WebSite,7AM_8AM,Attempted,NeedCounselling,CareerCounselling
+36,PremSagar,prem567@gmail.com,2024-07-03,91,8472891023,9000.23,2024-07-03,StudentReferral,1PM_2PM,Opportunity,FullStackJAVA,FullStack
+37,balajicharan,bljicharan@gmail.com,2024-07-03,91,9537279233,9600.90,2024-07-03,InboundCall,3PM_4PM,Opportunity,FrontEndReact,FullStack
+38,Gunaredy,gun367@gmail.com,2024-07-03,91,3657993742,74600.23,2024-07-03,InboundCall,5PM_6PM,Opportunity,PowerBI,Salesforce
+39,Nikitha,nikki89023@gmail.com,2024-07-01,91,7498233742,12300.56,2024-07-01,Demo,12PM_1PM,Opportunity,Java,FullStack
+40,HariPrasad,hprasad@gmail.com,2024-07-03,91,9874261290,13459.00,2024-07-03,WebsiteChat,5PM_6PM,Opportunity,BusinessAnalyst,BusinessStack
+41,Prakash,prksh234@gmail.com,2024-07-05,91,9083872918,23000.00,2024-07-05,WebSite,7AM_8AM,WarmLead,CloudOpsMasters,CloudOps
+42,Kanna,kanne7896@yahoo.in,2024-07-09,91,4757824832,12300.23,2024-07-09,WebsiteChat,1PM_2PM,Attempted,FullStackMEAN,Salesforce
+43,Neeraj,neeraj88@gmail.com,2024-07-08,91,4683726472,12000.00,2024-07-08,GoogleAdWords,8PM_9PM,Attempted,Python,FullStack
+44,dinesh,dine789@gmail.com,2024-07-10,91,9455727473,23000.00,2024-07-10,StudentReferral,2PM_3PM,Attempted,AWSWithDevOps,CloudOps
+46,venkymama,venky12@gmail.com,2024-10-22,91,1234569990,23000.00,2024-10-22,StudentReferral,2PM_3PM,WarmLead,Python,DataStack
+47,Suchith reddy,suchi23@gmail.com,2024-10-23,91,7366488328,230000.00,2024-10-23,WebSite,1PM_2PM,WarmLead,Python,FullStack

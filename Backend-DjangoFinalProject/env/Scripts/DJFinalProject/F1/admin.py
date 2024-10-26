@@ -6,6 +6,5 @@ class UserProfileAdmin(admin.ModelAdmin):
     search_fields = ('name','email','contact_no','courses')
 admin.site.register(CreateNewLead, UserProfileAdmin)
 
-
 #list_display - This is data display in admin django
 #searrch_fields - You can search username and get the data in admin django

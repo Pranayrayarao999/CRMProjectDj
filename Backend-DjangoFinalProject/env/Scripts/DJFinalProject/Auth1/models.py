@@ -17,7 +17,7 @@ class UserManager(BaseUserManager):
             name=name,
         )
 
-        user.set_password(password)
+        user.set_password(password)    #SET_PASSWORD() -- IS USED TO HASH OR STOPS SHOWING THE PASSWORD IN DATABASE
         user.save(using=self._db)
         return user
 

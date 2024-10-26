@@ -27,10 +27,9 @@ from django.contrib.auth.decorators import login_required
 # csv
 import csv
 # Excel
-from openpyxl import Workbook
-from io import BytesIO
-
-
+# from openpyxl import Workbook
+# from io import BytesIO
+#import xlwt
 
 # Create your views here.
 # @login_required                  #ONLY LOGIN PEOPLE CAN DO EVERYTHING
@@ -144,32 +143,6 @@ class CreateNewLeadViewSet(viewsets.ModelViewSet):
             writer.writerow([lead.id, lead.name, lead.email, lead.date, lead.cc, lead.contact_no, lead.fee_coated, lead.date, lead.lead_source, lead.batch_timing, lead.lead_status, lead.courses, lead.tech_stack])  # Add more fields as necessary
     
         return response
-    
-    #http://127.0.0.1:3000/api/leads/export-excel   -- these link will download the data in excel format
-    # @action(detail= False, methods=['get'], url_path='export-excel')
-    # def export_users_excel(self,request):
-    #     # Create a Workbook
-    #     wb = Workbook()
-    #     ws = wb.active
-    #     ws.title = 'Leads'
-
-    #     # Write the headers
-    #     ws.append(['ID','Name', 'Email', 'Date','cc','contact_no','fee_coated','date','lead_source','batch_timing','lead_status','courses','tech_stack'])  # Add more fields as necessary
-
-    #     leads = CreateNewLead.objects.all()  # Adjust the queryset as needed
-    #     for lead in leads:
-    #         ws.append([lead.id, lead.name, lead.email, lead.date, lead.cc, lead.contact_no, lead.fee_coated, lead.date, lead.lead_source, lead.batch_timing, lead.lead_status, lead.courses, lead.tech_stack])  # Add more fields as necessary
-
-    #     # Save the workbook to a BytesIO object
-    #     output = BytesIO()
-    #     wb.save(output)
-    #     output.seek(0)  # Move to the beginning of the BytesIO object
-
-    #     # Create the HttpResponse object with the appropriate Excel header
-    #     response = HttpResponse(output, content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
-    #     response['Content-Disposition'] = 'attachment; filename="leads.xlsx"'
-
-    #     return response
     
 
 

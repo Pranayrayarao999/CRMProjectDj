@@ -24,3 +24,6 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
 class LoginSerializers(serializers.Serializer):
     email=serializers.CharField()
     password=serializers.CharField(write_only=True)
+
+class PasswordResetSerializer(serializers.Serializer):
+    email = serializers.EmailField()

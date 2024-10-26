@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from Auth1.models import User
 from rest_framework.views import APIView
-from Auth1.serializers import UserRegistrationSerializer,LoginSerializers
+from Auth1.serializers import UserRegistrationSerializer,LoginSerializers,PasswordResetSerializer
 from rest_framework.response import Response
 from rest_framework import status
 from django.contrib.auth import authenticate,login
@@ -35,3 +35,11 @@ class LoginView(APIView):
 
             return Response({'msg':'invalid credential'})
         return Response(serializer.errors)   
+    
+# class GetUserData():
+#     def getuser(self,request):
+
+# class PasswordReset():
+#     def resetpasswrd(self,request):
+#         serializer = PasswordResetSerializer()
+        
