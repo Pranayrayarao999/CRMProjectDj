@@ -49,8 +49,14 @@ export class ULoginComponent{
         // window.localStorage.setItem('tgt_userName', success.username);
         // console.log("username :" +window.localStorage.getItem(success.username))
         // console.log("Token:",+window.localStorage.getItem(success.token));
+        alert("LOGGEDIN SUCCESSFULLY",);
+
+        setTimeout(() => {
+          alert("Welcome Admin");
+        }, 3000); // Wait for 3 seconds (3000 milliseconds)
+        
         this.router.navigateByUrl('FirstPage');
-        alert("WELCOME ADMIN",);
+        //alert("LOGGEDIN SUCCESSFULLY",);
         console.log("LOGGEDIN SUCCESSFULLY");
       },
       error =>{

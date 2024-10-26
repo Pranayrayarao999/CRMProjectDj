@@ -39,7 +39,8 @@ class LoginView(APIView):
 # class GetUserData():
 #     def getuser(self,request):
 
-# class PasswordReset():
-#     def resetpasswrd(self,request):
-#         serializer = PasswordResetSerializer()
+class PasswordReset():
+    def resetpasswrd(self,request):
+        serializer = PasswordResetSerializer()
+        
         

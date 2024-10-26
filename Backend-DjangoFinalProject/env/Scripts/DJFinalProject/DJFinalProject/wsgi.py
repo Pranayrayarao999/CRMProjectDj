@@ -14,3 +14,7 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'DJFinalProject.settings')
 
 application = get_wsgi_application()
+
+#check you have requirements.txt and versel.json before hosting to versel 
+# we need to create versel.json and add the code inside it, then add here this, check in setting added in hosts(vercel.app)
+app = application
